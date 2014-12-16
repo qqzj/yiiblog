@@ -87,4 +87,7 @@ return array(
 		// this is used in contact page
 		'adminEmail'=>'webmaster@example.com',
 	),
+	
+	/** 学习时，自定义的配置文件 */
+	'defaultController' => 'Index',
 );
