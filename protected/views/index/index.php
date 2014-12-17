@@ -1,5 +1,5 @@
 <?php
 	echo YII::app()->request->baseUrl;
 	echo '<br />';
-	echo "{$a}-{$b}-»¶Ó­Ê¹ÓÃYII¿ò¼Ü";
+	echo "{$a}-{$b}-æ¬¢è¿Žä½¿ç”¨YIIæ¡†æž¶";
 ?>
