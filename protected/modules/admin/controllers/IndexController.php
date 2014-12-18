@@ -22,8 +22,8 @@ class IndexController extends Controller
 				'class' => 'CCaptchaAction',
 				 'height' => 50,
 				 'width' => 150,
-				 'minLength' => 6,
-				 'maxLength' => 6,
+				 'minLength' => 4,
+				 'maxLength' => 4,
 			),
 		);
 	}
