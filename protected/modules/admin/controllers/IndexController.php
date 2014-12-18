@@ -19,7 +19,7 @@ class IndexController extends Controller
 	{
 		return array(
 			'captcha'=>array(
-				'class' => 'CCaptchaAction',
+				'class' => 'system.web.widgets.captcha.CCaptchaAction',
 				 'height' => 50,
 				 'width' => 150,
 				 'minLength' => 4,
