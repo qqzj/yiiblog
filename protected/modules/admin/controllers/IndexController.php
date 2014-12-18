@@ -4,6 +4,7 @@ class IndexController extends Controller
 {
 	public function actionIndex()
 	{
-		$this->render('index');
+		$loginForm = new LoginForm();
+		$this->render('index', array('loginForm'=>$loginForm));
 	}
 }
