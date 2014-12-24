@@ -46,19 +46,21 @@ return array(
 			),
 		),
 		*/
+		/**
 		'db'=>array(
 			'connectionString' => 'sqlite:'.dirname(__FILE__).'/../data/testdrive.db',
 		),
-		// uncomment the following to use a MySQL database
-		/*
-		'db'=>array(
-			'connectionString' => 'mysql:host=localhost;dbname=testdrive',
-			'emulatePrepare' => true,
-			'username' => 'root',
-			'password' => '',
-			'charset' => 'utf8',
-		),
 		*/
+		// uncomment the following to use a MySQL database
+		'db'=>array(
+			'connectionString' => 'mysql:host=localhost;dbname=test',
+			'emulatePrepare' => true,//需要PDO扩展
+			'username' => 'root',
+			'password' => 'mysql',
+			'charset' => 'utf8',
+			'tablePrefix'=>'hd_',//表前缀
+			'enableParamLogging'=>TRUE,//调试信息输出
+		),
 		'errorHandler'=>array(
 			// use 'site/error' action to display errors
 			'errorAction'=>'site/error',
