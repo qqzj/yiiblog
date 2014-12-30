@@ -1,17 +1,3 @@
-<?php
-/* @var $this DefaultController */
-
-$this->breadcrumbs=array(
-	$this->module->id,
-);
-?>
-<h1><?php echo $this->uniqueId . '/' . $this->action->id; ?></h1>
-
-<p>
-This is the view content for action "<?php echo $this->action->id; ?>".
-The action belongs to the controller "<?php echo get_class($this); ?>"
-in the "<?php echo $this->module->id; ?>" module.
-</p>
-<p>
-You may customize this page by editing <tt><?php echo __FILE__; ?></tt>
-</p>
+<h1>后台首页</h1><a href="<?php echo $this->createUrl('index/out');?>">退出</a>
+<h3>欢迎你，<?php echo Yii::app()->user->name;?>!</h3>
+<h5>当前时间，<?php echo date('Y-m-d H:i:s', time()); ?></h5>

@@ -6,14 +6,12 @@ class IndexController extends Controller
 	{
 		//$userInfo = User::model()->find('username=:name', array(':name'=>'admin'));
 		//var_dump($userInfo);die();
-		echo '【' . Yii::app()->user->name . '】<hr />';
+		if(Yii::app()->user->name != 'Guest')$this->redirect(array('default/index'));
 		$loginForm = new LoginForm();
 		if(@$_POST['LoginForm']){
 			$loginForm->attributes = $_POST['LoginForm'];
 			if($loginForm->validate() && $loginForm->login()){
-				echo 'Authentication OK';
-				echo '<br />';
-				return;
+				$this->redirect(array('default/index'));
 			}
 		}
 		
@@ -30,5 +28,10 @@ class IndexController extends Controller
 				 'maxLength' => 4,
 			),
 		);
+	}
+	
+	public function actionOut(){
+		Yii::app()->user->logout();
+		$this->redirect(array('index/index'));
 	}
 }
