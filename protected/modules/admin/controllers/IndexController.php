@@ -6,11 +6,13 @@ class IndexController extends Controller
 	{
 		//$userInfo = User::model()->find('username=:name', array(':name'=>'admin'));
 		//var_dump($userInfo);die();
+		echo '【' . Yii::app()->user->name . '】<hr />';
 		$loginForm = new LoginForm();
 		if(@$_POST['LoginForm']){
 			$loginForm->attributes = $_POST['LoginForm'];
-			if($loginForm->validate()){
+			if($loginForm->validate() && $loginForm->login()){
 				echo 'Authentication OK';
+				echo '<br />';
 				return;
 			}
 		}
