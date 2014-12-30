@@ -4,6 +4,8 @@ class IndexController extends Controller
 {
 	public function actionIndex()
 	{
+		//$userInfo = User::model()->find('username=:name', array(':name'=>'admin'));
+		//var_dump($userInfo);die();
 		$loginForm = new LoginForm();
 		if(@$_POST['LoginForm']){
 			$loginForm->attributes = $_POST['LoginForm'];

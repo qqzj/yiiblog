@@ -9,7 +9,11 @@
 <br />
 记住我:<?php echo $form->checkBox($loginForm, 'rememberMe', array('id'=>'remember'));?><br />
 <input type="submit" value="登陆" /><br />
-<span style="color:red;font-weight:bold;"><?php echo $form->error($loginForm, 'captcha')?></span>
+<span style="color:red;font-weight:bold;">
+<?php echo $form->error($loginForm, 'username')?>
+<?php echo $form->error($loginForm, 'password')?>
+<?php echo $form->error($loginForm, 'captcha')?>
+</span>
 <?php $this->endWidget();?>
 <hr />
 <h1>后台管理 / Index控制器 / index方法</h1>
