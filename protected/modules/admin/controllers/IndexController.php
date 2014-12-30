@@ -11,6 +11,7 @@ class IndexController extends Controller
 		if(@$_POST['LoginForm']){
 			$loginForm->attributes = $_POST['LoginForm'];
 			if($loginForm->validate() && $loginForm->login()){
+				Yii::app()->session['loginDate'] = time();
 				$this->redirect(array('default/index'));
 			}
 		}
